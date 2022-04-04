@@ -10,14 +10,16 @@ export function Posts() {
     fetch('http://localhost:3000/posts')
         .then(response => response.json())
         .then(posts => {
+            const article = document.createElement('article')
             const ul = document.createElement('ul');
             const lis = posts.map(post => Post(post));
 
             ul.append(...lis);
 
             section.querySelector('#loading').remove();
-            section.append(ul);
-
+            article.append(ul);
+            section.append(article);
+            
         });
 
     return section;

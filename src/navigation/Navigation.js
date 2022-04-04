@@ -19,11 +19,9 @@ const navigationItems = [
 ]
 
 export function Navigation() {
-	const navbar = document.createElement('navbar')
+	const menu = document.createElement('menu')
 
-    navbar.classList.add('navbar')
-	
-
+	menu.classList.add('menu')
 
 	const navigationButtons = navigationItems.map(item => {
 		const { component, name } = item
@@ -34,7 +32,10 @@ export function Navigation() {
 	// na start, ustawiamy klasę `active-btn` na pierwszym guziku
 	navigationButtons[0].classList.add('active-btn')
 
-	navbar.append(...navigationButtons)
+	menu.append(...navigationButtons)
 
-	return navbar
+
+
+
+	return menu
 }

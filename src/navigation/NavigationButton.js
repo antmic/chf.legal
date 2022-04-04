@@ -3,7 +3,7 @@
 export function NavigationButton(Component, text) {
     const button = document.createElement('button');
     
-    button.classList.add('btn', 'nav-btn')
+    button.classList.add('btn', 'nav-btn', 'menuItem')
     button.setAttribute('type', 'button');
     button.innerText = text;
 

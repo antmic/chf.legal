@@ -20,7 +20,7 @@ export function CalculatorForm() {
 
 	const section = document.createElement('section')
 	const header = document.createElement('header')
-	const header_text = document.createElement('h1')
+	const header_text = document.createElement('h2')
 
 	header_text.textContent = 'Kalkulator'
 	header.append(header_text)
@@ -35,7 +35,7 @@ export function CalculatorForm() {
 	formField0.setAttribute('class', 'formField')
 	const bank_name_label = document.createElement('Label')
 	setAttributes(bank_name_label, { for: 'bank_name', class: 'label' })
-	bank_name_label.innerHTML = 'Proszę wybrać bank'
+	bank_name_label.innerHTML = 'Proszę wybrać bank:'
 	formField0.append(bank_name_label)
 	const bank_name = document.createElement('select')
 	setAttributes(bank_name, { required: 'true', name: 'input', id: 'bank_name' })
@@ -60,13 +60,13 @@ export function CalculatorForm() {
 	formField1.setAttribute('class', 'formField')
 	const credit_sum_label = document.createElement('Label')
 	credit_sum_label.setAttribute('for', 'credit_sum')
-	credit_sum_label.innerHTML = 'Kwota wypłaconego kredytu'
+	credit_sum_label.innerHTML = 'Kwota wypłaconego kredytu:'
 	formField1.append(credit_sum_label)
 	const credit_sum = addInput(formField1)
 	setAttributes(credit_sum, {
 		id: 'credit_sum',
 		type: 'number',
-		placeholder: 'kwota',
+		placeholder: '0.00 zł',
 		step: '0.01',
 		max: '9999999',
 		min: '0',
@@ -80,7 +80,7 @@ export function CalculatorForm() {
 	formField2.setAttribute('class', 'formField')
 	const credit_date_label = document.createElement('Label')
 	credit_date_label.setAttribute('for', 'credit_sum')
-	credit_date_label.innerHTML = 'Data wypłacenia kredytu'
+	credit_date_label.innerHTML = 'Data wypłacenia kredytu:'
 	formField2.append(credit_date_label)
 	const credit_date = addInput(formField2)
 	setAttributes(credit_date, {
@@ -117,7 +117,7 @@ export function CalculatorForm() {
 	formField3.setAttribute('class', 'formField')
 	const credit_margin_label = document.createElement('Label')
 	credit_margin_label.setAttribute('for', 'credit_margin')
-	credit_margin_label.innerHTML = 'Marża banku'
+	credit_margin_label.innerHTML = 'Marża banku:'
 	formField3.append(credit_margin_label)
 	const credit_margin = addInput(formField3)
 	setAttributes(credit_margin, {
@@ -136,7 +136,7 @@ export function CalculatorForm() {
 	formField4.setAttribute('class', 'formField')
 	const first_payment_label = document.createElement('Label')
 	first_payment_label.setAttribute('for', 'payment_date')
-	first_payment_label.innerHTML = 'Miesiąc zapłaty pierwszej raty'
+	first_payment_label.innerHTML = 'Data pierwszej raty:'
 	formField4.append(first_payment_label)
 	const payment_date = addInput(formField4)
 	setAttributes(payment_date, {
@@ -154,13 +154,13 @@ export function CalculatorForm() {
 	formField5.setAttribute('class', 'formField')
 	const number_of_payments_label = document.createElement('Label')
 	number_of_payments_label.setAttribute('for', 'number_of_payments')
-	number_of_payments_label.innerHTML = 'Liczba rat'
+	number_of_payments_label.innerHTML = 'Liczba rat:'
 	formField5.append(number_of_payments_label)
 	const number_of_payments = addInput(formField5)
 	setAttributes(number_of_payments, {
 		id: 'number_of_payments',
 		type: 'number',
-		placeholder: 'liczba rat',
+		placeholder: '0',
 		step: '1',
 		max: '999',
 		min: '0',
@@ -177,6 +177,7 @@ export function CalculatorForm() {
 	formField6.append(checkbox_paid)
 
 	const checkbox_div = document.createElement('div')
+	setAttributes(checkbox_div, {class: 'checkbox_div'})
 	const if_early_paid1_label = document.createElement('Label')
 	if_early_paid1_label.setAttribute('for', 'if_early_paid1')
 	if_early_paid1_label.setAttribute('class', 'checkbox')
@@ -189,6 +190,7 @@ export function CalculatorForm() {
 		value: 'Tak',
 		class: 'paidCheckbox',
 		class: 'checkbox',
+		class: 'radio_dot',
 		name: 'input',
 		required: 'true',
 	})
@@ -203,6 +205,7 @@ export function CalculatorForm() {
 		type: 'radio',
 		value: 'Nie',
 		class: 'checkbox',
+		class: 'radio_dot',
 		name: 'input',
 		required: 'true',
 	})
@@ -230,7 +233,6 @@ export function CalculatorForm() {
 			console.log('Checkbox is not checked.')
 		}
 	})
-
 	formField6.append(checkbox_div)
 	form.append(formField6)
 
@@ -238,9 +240,10 @@ export function CalculatorForm() {
 	formField7.setAttribute('class', 'formField')
 	const checkbox_installment = document.createElement('p')
 	checkbox_installment.setAttribute('class', 'label')
-	checkbox_installment.textContent = 'Typ rat'
+	checkbox_installment.textContent = 'Typ rat:'
 	formField7.append(checkbox_installment)
 	const checkbox_div2 = document.createElement('div')
+	setAttributes(checkbox_div2, {class: 'checkbox_div'})
 	const installment_label_equal = document.createElement('Label')
 	installment_label_equal.setAttribute('for', 'installment_equal')
 	installment_label_equal.setAttribute('class', 'checkbox')
@@ -251,7 +254,8 @@ export function CalculatorForm() {
 		id: 'installment_equal',
 		type: 'radio',
 		value: 'Równa',
-		class: 'checkbox',
+		class: 'checkbox', 
+		class: 'radio_dot',
 		name: 'input',
 		name: 'installment',
 		required: 'true',
@@ -268,6 +272,7 @@ export function CalculatorForm() {
 		type: 'radio',
 		value: 'Malejąca',
 		class: 'checkbox',
+		class: 'radio_dot',
 		name: 'input',
 		name: 'installment',
 		required: 'true',
@@ -282,6 +287,7 @@ export function CalculatorForm() {
 		id: 'submit_btn',
 		type: 'submit',
 		value: 'Oblicz',
+		class: 'submit_btn',
 		name: 'input',
 		required: 'true',
 	})

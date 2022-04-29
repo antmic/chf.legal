@@ -176,7 +176,11 @@ body {
 							margin: 10px;
 							font-size: 30px;
 							background-color: #fff;
-							border-radius: 15px;
+							border-radius: 10px;
+						}
+						.submit_btn {
+							background-color: #fff;
+							border-radius: 10px;
 						}
 					}
 				}
@@ -190,68 +194,67 @@ body {
 }
 
 @media (min-device-width: 600px) {
-	main {
+	body main section {
 		header {
 			font-size: 28px;
 		}
-		.form-control {
+		article .form-control {
 			line-height: 60px;
 			font-size: 40px;
 		}
-		.formField {
+		article form .formField {
 			font-size: 30px;
 			padding: 10px;
-		}
-		input,
-		select {
-			font-size: 30px;
-			padding: 10px;
-			margin: 10px;
+			input,
+			select {
+				font-size: 30px;
+				padding: 10px;
+				margin: 10px;
+			}
 		}
 	}
 }
 
 @media (min-device-width: 800px) {
-	.menuItem {
-		font-size: 50px;
-	}
-	main {
-		.btn {
-			height: 38px;
-			font-size: 24px;
+	body {
+		.menuItem {
+			font-size: 50px;
 		}
-		article {
-			font-size: 28px;
-			h5 {
-				font-size: 24px;
-				margin: 10px 5px;
-				padding: 10px 5px;
-			}
-			.form-control {
-				padding: 10px;
-				line-height: 40px;
+		main section {
+			.btn {
+				height: 38px;
 				font-size: 24px;
 			}
-			.formField {
-				font-size: 24px;
-				padding: 10px;
-				.checkbox_div {
-					height: 50px;
-					.radio_dot {
-						width: 30px;
-						height: 30px;
+			article {
+				font-size: 28px;
+				h5 {
+					font-size: 24px;
+					margin: 10px 5px;
+					padding: 10px 5px;
+				}
+				.form-control {
+					padding: 10px;
+					line-height: 40px;
+					font-size: 24px;
+				}
+				form .formField {
+					font-size: 24px;
+					padding: 10px;
+					.checkbox_div {
+						height: 50px;
+						.radio_dot {
+							width: 30px;
+							height: 30px;
+						}
 					}
-				}
-				input,
-				select {
-					font-size: 20px;
-				}
-				button {
-					height: 32px;
-					font-size: 16px;
-				}
-				.submit_btn {
-					background-color: #fff;
+					input,
+					select {
+						font-size: 20px;
+					}
+					button {
+						height: 32px;
+						font-size: 16px;
+					}
 				}
 			}
 		}
@@ -259,57 +262,71 @@ body {
 }
 
 @media (min-device-width: 1000px) {
-	body .menuItem {
-		font-size: 40px;
-	}
+	body {
+		width: 80%;
+		margin: auto;
+		.menuItem {
+			font-size: 40px;
+		}
 
-	.hamburger {
-		right: 10%;
-	}
+		.hamburger {
+			right: 10%;
+		}
 
-	main {
-		section {
-			height: auto;
+		main {
+			section {
+				height: auto;
 
-			header {
-				font-size: 16px;
-			}
-			.btn {
-				width: 100px;
-				height: 28px;
-				padding: 5px 0px;
-				margin: 5px 0px;
-				font-size: 13px;
-			}
-			article {
-				font-size: 18px;
-				h5 {
-					font-size: 16px;
-					margin: 0px 5px 5px 5px;
-					padding: 0px 5px 5px 5px;
-				}
-				form .form-control {
-					line-height: 20px;
+				header {
 					font-size: 16px;
 				}
-				ul li {
-					margin: 5px;
+				.btn {
+					width: 100px;
+					height: 28px;
+					padding: 5px 0px;
+					margin: 5px 0px;
+					font-size: 13px;
 				}
-				form .formField {
-					font-size: 20px;
-					padding: 5px;
-					input, select {
+				article {
+					font-size: 18px;
+					h5 {
 						font-size: 16px;
-						padding: 5px;
+						margin: 0px 5px 5px 5px;
+						padding: 0px 5px 5px 5px;
+					}
+					.form-control {
+						line-height: 20px;
+						font-size: 16px;
+					}
+					ul li {
 						margin: 5px;
 					}
-					button {
-						width: 100px;
-						height: 28px;
-						padding: 5px;
-						margin: 5px;
+					form .formField {
 						font-size: 16px;
-						border-radius: 10px;
+						padding: 5px;
+						.checkbox_div {
+							height: 30px;
+							.radio_dot {
+								border: 0px;
+								width: 20px;
+								height: 20px;
+								margin: 0px 50px 0px 10px;
+							}
+						}
+						input,
+						select {
+							font-size: 12px;
+							padding: 5px;
+							margin: 5px;
+						}
+						button {
+							width: 100px;
+							height: 28px;
+							padding: 5px;
+							margin: 5px;
+							font-size: 12px;
+							border-radius: 10px;
+						}
 					}
 				}
 			}

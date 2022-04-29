@@ -1,1088 +1,318 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap');
 
-@media (max-device-width: 599px) {
-	* {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-		font-family: 'Lato', sans-serif;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Lato', sans-serif;
+}
+body {
+	background-image: url('./assets/courthouse.jpeg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-color: rgba($color: #fff, $alpha: 0.2);
+	.menuItem {
+		display: block;
+		background-color: rgba($color: #fff, $alpha: 0);
+		margin: 30px 60px;
+		font-size: 120px;
+		color: black;
+		text-decoration: none;
+		border: 0;
 	}
-
-	body {
-		background-image: url('./assets/courthouse.jpeg');
-		background-position: center center;
-		background-repeat:no-repeat;
-		background-attachment: fixed;
-		background-size: cover;
+	.menuItem:hover {
+		text-decoration: underline;
+	}
+	.hamburger {
+		position: fixed;
+		z-index: 100;
+		top: 10px;
+		right: 10px;
+		padding: 4px;
+		border: black solid 1px;
+		background: rgba($color: #fff, $alpha: 0.5);
+		cursor: pointer;
+		.material-icons {
+			font-size: 85px;
+		}
+	}
+	.closeIcon {
+		display: none;
+	}
+	.menu {
+		position: fixed;
+		transform: translateY(-100%);
+		transition: transform 0.2s;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 99;
 		background-color: rgba($color: #fff, $alpha: 0.2);
-		.menuItem {
-			display: block;
-			background-color: rgba($color: #fff, $alpha: 0);
-			margin: 2rem 4rem;
-			font-size: 8rem;
-			color: black;
-			text-decoration: none;
+		backdrop-filter: blur(5px);
+		color: white;
+		list-style: none;
+		padding-top: 4rem;
+	}
+	.showMenu {
+		transform: translateY(0);
+	}
+	.logo {
+		position: relative;
+		z-index: 100;
+		width: 100px;
+		border: 5px;
+		margin: 5px;
+		padding: 5px;
+		background-color: rgba($color: #fff, $alpha: 0.5);
+	}
+	main {
+		section {
+			padding-bottom: 1px;
+			margin: 0;
 			border: 0;
-		}
-
-		.menuItem:hover {
-			text-decoration: underline;
-		}
-
-		.hamburger {
-			position: fixed;
-			z-index: 100;
-			top: 10px;
-			right: 10px;
-			padding: 4px;
-			border: black solid 1px;
-			background: rgba($color: #fff, $alpha: 0.5);
-			cursor: pointer;
-			.material-icons {
-				font-size: 85px;
+			header {
+				font-size: 30px;
+				color: black;
+				background-color: rgba($color: #fff, $alpha: 0.5);
+				backdrop-filter: blur(20px);
+				padding: 20px;
+				text-align: center;
 			}
-		}
-
-		.closeIcon {
-			display: none;
-		}
-
-		.menu {
-			position: fixed;
-			transform: translateY(-100%);
-			transition: transform 0.2s;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			z-index: 99;
-			background-color: rgba($color: #fff, $alpha: 0.2);
-			backdrop-filter: blur(5px);
-			color: white;
-			list-style: none;
-			padding-top: 4rem;
-		}
-
-		.showMenu {
-			transform: translateY(0);
-		}
-
-		.logo {
-			position: relative;
-			z-index: 100;
-			width: 100px;
-			border: 5px;
-			margin: 5px;
-			padding: 5px;
-			background-color: rgba($color: #fff, $alpha: 0.5);
-		}
-		main {
-
-			section {
-				padding-bottom: 1px;
-				margin: 0;
-				border: 0;
-				header {
-					font-size: 30px;
-					color: black;
-					background-color: rgba($color: #fff, $alpha: 0.5);
-					backdrop-filter: blur(20px);
-					padding: 20px;
+			.btn {
+				width: 200px;
+				height: 48px;
+				padding: 10px 0px;
+				margin: 10px 0px;
+				font-size: 30px;
+				background-color: #fff;
+				border-radius: 15px;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.btn-back {
+				margin: 0px 10px 10px 10px;
+			}
+			.btn-success {
+				height: auto;
+			}
+			article {
+				background-color: rgba($color: #fff, $alpha: 0.8);
+				margin: 15px;
+				padding: 15px;
+				border-radius: 15px;
+				text-align: justify;
+				font-size: 30px;
+				h5 {
 					text-align: center;
-				}
-				.btn {
-					width: 200px;
-					height: 48px;
-					padding: 10px 0px;
-					margin: 10px 0px;
 					font-size: 30px;
-					background-color: #fff;
-					border-radius: 15px;
-					display: inline-flex;
-					align-items: center;
-					justify-content: center;
+					margin: 15px 5px;
+					padding: 15px 5px;
 				}
-				.btn-back {
-					margin: 0px 10px 10px 10px;
-				}
-				.btn-success {
-					height: auto;
-				}
-				article {
-					background-color: rgba($color: #fff, $alpha: 0.8);
-					margin: 15px;
+				.form-control {
+					font-family: 'Lato', sans-serif;
+					width: auto;
 					padding: 15px;
-					border-radius: 15px;
-					text-align: justify;
-					font-size: 30px;
-					h5 {
-						text-align: center;
-						font-size: 30px;
-						margin: 15px 5px;
-						padding: 15px 5px;
+					margin: 3px;
+					border: 2px;
+					border-radius: 10px;
+					line-height: 80px;
+					font-size: 50px;
+				}
+				ul li {
+					margin: 10px;
+					list-style: none;
+				}
+				form {
+					display: flex;
+					flex-direction: column;
+					border: 0;
+					.credit_date {
+						display: block;
 					}
-					.form-control {
-						font-family: 'Lato', sans-serif;
-						width: auto;
-						padding: 15px;
-						margin: 3px;
-						border: 2px;
-						border-radius: 10px;
-						line-height: 80px;
-						font-size: 50px;
-					}
-					ul li {
-						margin: 10px;
-						list-style: none;
-					}
-					form {
-						display: flex;
-						flex-direction: column;
-						border: 0;
-						.credit_date {
-							display: block;
+					.formField {
+						border-radius: 15px;
+						font-size: 40px;
+						padding: 25px;
+						label {
+							display: inline-block;
 						}
-						.formField {
-							border-radius: 15px;
-							font-size: 40px;
-							padding: 25px;
-							label {
-								display: inline-block;
-							}
-							.checkbox_div {
-								display: flex;
-								height: 100px;
-								align-items: center;
-
-								.checkbox {
-									display: inline-flex;
-									flex-direction: row;
-									align-items: center;
-									justify-content: center;
-									height: 100%;
-									width: auto;
-								}
-								.radio_dot {
-									border: 0px;
-									width: 50px;
-									height: 50px;
-									margin: 0px 50px 0px 10px;
-								}
-							}
-							input,
-							select {
-								border-radius: 15px;
-								font-size: 40px;
-								padding: 15px;
-								margin: 15px;
-							}
-							button {
+						.checkbox_div {
+							display: flex;
+							height: 100px;
+							align-items: center;
+							.checkbox {
 								display: inline-flex;
+								flex-direction: row;
 								align-items: center;
 								justify-content: center;
-								width: 200px;
-								height: 48px;
-								padding: 10px;
-								margin: 10px;
-								font-size: 30px;
-								background-color: #fff;
-								border-radius: 15px;
+								height: 100%;
+								width: auto;
 							}
+							.radio_dot {
+								border: 0px;
+								width: 50px;
+								height: 50px;
+								margin: 0px 50px 0px 10px;
+							}
+						}
+						input,
+						select {
+							border-radius: 15px;
+							font-size: 40px;
+							padding: 15px;
+							margin: 15px;
+						}
+						button {
+							display: inline-flex;
+							align-items: center;
+							justify-content: center;
+							width: 200px;
+							height: 48px;
+							padding: 10px;
+							margin: 10px;
+							font-size: 30px;
+							background-color: #fff;
+							border-radius: 15px;
 						}
 					}
 				}
 			}
 		}
-		footer {
-			margin: 0px;
-			font-size: x-small;
-		}
+	}
+	footer {
+		margin: 0px;
+		font-size: x-small;
 	}
 }
 
 @media (min-device-width: 600px) {
-	* {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-		font-family: 'Lato', sans-serif;
-	}
-	body {
-		background-image: url('./assets/courthouse.jpeg');
-		background-position: center center;
-		background-repeat:no-repeat;
-		background-attachment: fixed;
-		background-size: cover;
-		background-color: rgba($color: #fff, $alpha: 0.2);
-		.menuItem {
-			display: block;
-			background-color: rgba($color: #fff, $alpha: 0);
-			margin: 2rem 4rem;
-			font-size: 50px;
-			color: black;
-			text-decoration: none;
-			border: 0;
+	main {
+		header {
+			font-size: 28px;
 		}
-
-		.menuItem:hover {
-			text-decoration: underline;
+		.form-control {
+			line-height: 60px;
+			font-size: 40px;
 		}
-
-		.hamburger {
-			position: fixed;
-			z-index: 100;
-			top: 10px;
-			right: 10px;
-			padding: 4px;
-			border: black solid 1px;
-			background: rgba($color: #fff, $alpha: 0.5);
-			cursor: pointer;
-			.material-icons {
-				font-size: 85px;
-			}
+		.formField {
+			font-size: 30px;
+			padding: 10px;
 		}
-
-		.closeIcon {
-			display: none;
-		}
-
-		.menu {
-			position: fixed;
-			transform: translateY(-100%);
-			transition: transform 0.2s;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			z-index: 99;
-			background-color: rgba($color: #fff, $alpha: 0.2);
-			backdrop-filter: blur(5px);
-			color: white;
-			list-style: none;
-			padding-top: 4rem;
-		}
-
-		.showMenu {
-			transform: translateY(0);
-		}
-
-		.logo {
-			position: relative;
-			z-index: 100;
-			width: 100px;
-			border: 5px;
-			margin: 5px;
-			padding: 5px;
-			background-color: rgba($color: #fff, $alpha: 0.5);
-		}
-		main {
-
-			section {
-				padding-bottom: 1px;
-				margin: 0;
-				border: 0;
-				header {
-					font-size: 28px;
-					color: black;
-					background-color: rgba($color: #fff, $alpha: 0.5);
-					backdrop-filter: blur(20px);
-					padding: 20px;
-					text-align: center;
-				}
-				.btn {
-					width: 200px;
-					height: 48px;
-					padding: 10px 0px;
-					margin: 10px 0px;
-					font-size: 30px;
-					background-color: #fff;
-					border-radius: 15px;
-					display: inline-flex;
-					align-items: center;
-					justify-content: center;
-				}
-				.btn-back {
-					margin: 0px 10px 10px 10px;
-				}
-				.btn-success {
-					height: auto;
-				}
-				article {
-					background-color: rgba($color: #fff, $alpha: 0.8);
-					margin: 15px;
-					padding: 15px;
-					border-radius: 15px;
-					text-align: justify;
-					font-size: 30px;
-					h5 {
-						text-align: center;
-						font-size: 30px;
-						margin: 15px 5px;
-						padding: 15px 5px;
-					}
-					.form-control {
-						font-family: 'Lato', sans-serif;
-						width: auto;
-						padding: 15px;
-						margin: 3px;
-						border: 2px;
-						border-radius: 10px;
-						line-height: 60px;
-						font-size: 40px;
-					}
-					ul li {
-						margin: 10px;
-						list-style: none;
-					}
-					form {
-						display: flex;
-						flex-direction: column;
-						border: 0;
-						.credit_date {
-							display: block;
-						}
-						.formField {
-							border-radius: 15px;
-							font-size: 30px;
-							padding: 10px;
-							label {
-								display: inline-block;
-							}
-							.checkbox_div {
-								display: flex;
-								height: 100px;
-								align-items: center;
-
-								.checkbox {
-									display: inline-flex;
-									flex-direction: row;
-									align-items: center;
-									justify-content: center;
-									height: 100%;
-									width: auto;
-								}
-								.radio_dot {
-									border: 0px;
-									width: 50px;
-									height: 50px;
-									margin: 0px 50px 0px 10px;
-								}
-							}
-							input,
-							select {
-								border-radius: 15px;
-								font-size: 30px;
-								padding: 10px;
-								margin: 10px;
-							}
-							button {
-								display: inline-flex;
-								align-items: center;
-								justify-content: center;
-								width: 200px;
-								height: 48px;
-								padding: 10px;
-								margin: 10px;
-								font-size: 30px;
-								background-color: #fff;
-								border-radius: 15px;
-							}
-							.submit_btn {
-								background-color: #fff;
-							}
-						}
-					}
-				}
-			}
-		}
-		footer {
-			margin: 0px;
-			font-size: x-small;
+		input,
+		select {
+			font-size: 30px;
+			padding: 10px;
+			margin: 10px;
 		}
 	}
 }
 
-
-
 @media (min-device-width: 800px) {
-	* {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-		font-family: 'Lato', sans-serif;
+	.menuItem {
+		font-size: 50px;
 	}
-	body {
-		background-image: url('./assets/courthouse.jpeg');
-		background-position: center center;
-		background-repeat:no-repeat;
-		background-attachment: fixed;
-		background-size: cover;
-		background-color: rgba($color: #fff, $alpha: 0.2);
-		.menuItem {
-			display: block;
-			background-color: rgba($color: #fff, $alpha: 0);
-			margin: 2rem 4rem;
-			font-size: 50px;
-			color: black;
-			text-decoration: none;
-			border: 0;
+	main {
+		.btn {
+			height: 38px;
+			font-size: 24px;
 		}
-
-		.menuItem:hover {
-			text-decoration: underline;
-		}
-
-		.hamburger {
-			position: fixed;
-			z-index: 100;
-			top: 10px;
-			right: 10px;
-			padding: 4px;
-			border: black solid 1px;
-			background: rgba($color: #fff, $alpha: 0.5);
-			cursor: pointer;
-			.material-icons {
-				font-size: 85px;
+		article {
+			font-size: 28px;
+			h5 {
+				font-size: 24px;
+				margin: 10px 5px;
+				padding: 10px 5px;
 			}
-		}
-
-		.closeIcon {
-			display: none;
-		}
-
-		.menu {
-			position: fixed;
-			transform: translateY(-100%);
-			transition: transform 0.2s;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			z-index: 99;
-			background-color: rgba($color: #fff, $alpha: 0.2);
-			backdrop-filter: blur(5px);
-			color: white;
-			list-style: none;
-			padding-top: 4rem;
-		}
-
-		.showMenu {
-			transform: translateY(0);
-		}
-
-		.logo {
-			position: relative;
-			z-index: 100;
-			width: 100px;
-			border: 5px;
-			margin: 5px;
-			padding: 5px;
-			background-color: rgba($color: #fff, $alpha: 0.5);
-		}
-		main {
-
-			section {
-				padding-bottom: 1px;
-				margin: 0;
-				border: 0;
-				header {
-					font-size: 28px;
-					color: black;
-					background-color: rgba($color: #fff, $alpha: 0.5);
-					backdrop-filter: blur(20px);
-					padding: 20px;
-					text-align: center;
+			.form-control {
+				padding: 10px;
+				line-height: 40px;
+				font-size: 24px;
+			}
+			.formField {
+				font-size: 24px;
+				padding: 10px;
+				.checkbox_div {
+					height: 50px;
+					.radio_dot {
+						width: 30px;
+						height: 30px;
+					}
 				}
-				.btn {
-					width: 200px;
-					height: 38px;
-					padding: 10px 0px;
-					margin: 10px 0px;
-					font-size: 24px;
+				input,
+				select {
+					font-size: 20px;
+				}
+				button {
+					height: 32px;
+					font-size: 16px;
+				}
+				.submit_btn {
 					background-color: #fff;
-					border-radius: 15px;
-					display: inline-flex;
-					align-items: center;
-					justify-content: center;
-				}
-				.btn-back {
-					margin: 0px 10px 10px 10px;
-				}
-				.btn-success {
-					height: auto;
-				}
-				article {
-					background-color: rgba($color: #fff, $alpha: 0.8);
-					margin: 15px;
-					padding: 15px;
-					border-radius: 15px;
-					text-align: justify;
-					font-size: 28px;
-					h5 {
-						text-align: center;
-						font-size: 24px;
-						margin: 10px 5px;
-						padding: 10px 5px;
-					}
-					.form-control {
-						font-family: 'Lato', sans-serif;
-						width: auto;
-						padding: 10px;
-						margin: 3px;
-						border: 2px;
-						border-radius: 10px;
-						line-height: 40px;
-						font-size: 24px;
-					}
-					ul li {
-						margin: 10px;
-						list-style: none;
-					}
-					form {
-						display: flex;
-						flex-direction: column;
-						border: 0;
-						.credit_date {
-							display: block;
-						}
-						.formField {
-							border-radius: 15px;
-							font-size: 24px;
-							padding: 10px;
-							label {
-								display: inline-block;
-							}
-							.checkbox_div {
-								display: flex;
-								height: 50px;
-								align-items: center;
-
-								.checkbox {
-									display: inline-flex;
-									flex-direction: row;
-									align-items: center;
-									justify-content: center;
-									height: 100%;
-									width: auto;
-								}
-								.radio_dot {
-									border: 0px;
-									width: 30px;
-									height: 30px;
-									margin: 0px 50px 0px 10px;
-								}
-							}
-							input,
-							select {
-								border-radius: 15px;
-								font-size: 20px;
-								padding: 10px;
-								margin: 10px;
-							}
-							button {
-								display: inline-flex;
-								align-items: center;
-								justify-content: center;
-								width: 200px;
-								height: 32px;
-								padding: 10px;
-								margin: 10px;
-								font-size: 16px;
-								background-color: #fff;
-								border-radius: 15px;
-							}
-							.submit_btn {
-								background-color: #fff;
-							}
-						}
-					}
 				}
 			}
-		}
-		footer {
-			margin: 0px;
-			font-size: x-small;
 		}
 	}
 }
 
 @media (min-device-width: 1000px) {
-	* {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-		font-family: 'Lato', sans-serif;
+	body .menuItem {
+		font-size: 40px;
 	}
-	body {
-		background-image: url('./assets/courthouse.jpeg');
-		background-position: center center;
-		background-repeat:no-repeat;
-		background-attachment: fixed;
-		background-size: cover;
-		background-color: rgba($color: #fff, $alpha: 0.2);
-		width: 80%;
-		margin: auto;
 
-		.menuItem {
-			display: block;
-			background-color: rgba($color: #fff, $alpha: 0);
-			margin: 2rem 4rem;
-			font-size: 30px;
-			color: black;
-			text-decoration: none;
-			border: 0;
-		}
+	.hamburger {
+		right: 10%;
+	}
 
-		.menuItem:hover {
-			text-decoration: underline;
-		}
+	main {
+		section {
+			height: auto;
 
-		.hamburger {
-			position: fixed;
-			z-index: 100;
-			top: 10px;
-			right: 10%;
-			padding: 4px;
-			border: black solid 1px;
-			background: rgba($color: #fff, $alpha: 0.5);
-			cursor: pointer;
-			.material-icons {
-				font-size: 85px;
+			header {
+				font-size: 16px;
 			}
-		}
-
-		.closeIcon {
-			display: none;
-		}
-
-		.menu {
-			position: fixed;
-			transform: translateY(-100%);
-			transition: transform 0.2s;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			z-index: 99;
-			background-color: rgba($color: #fff, $alpha: 0.2);
-			backdrop-filter: blur(5px);
-			color: white;
-			list-style: none;
-			padding-top: 4rem;
-		}
-
-		.showMenu {
-			transform: translateY(0);
-		}
-
-		.logo {
-			position: relative;
-			z-index: 100;
-			width: 100px;
-			border: 5px;
-			margin: 5px;
-			padding: 5px;
-			background-color: rgba($color: #fff, $alpha: 0.5);
-		}
-		main {
-
-			section {
-				padding-bottom: 1px;
-				margin: 0;
-				border: 0;
-				height: auto;
-
-				header {
+			.btn {
+				width: 100px;
+				height: 28px;
+				padding: 5px 0px;
+				margin: 5px 0px;
+				font-size: 13px;
+			}
+			article {
+				font-size: 18px;
+				h5 {
 					font-size: 16px;
-					color: black;
-					background-color: rgba($color: #fff, $alpha: 0.5);
-					backdrop-filter: blur(20px);
-					padding: 20px;
-					text-align: center;
+					margin: 0px 5px 5px 5px;
+					padding: 0px 5px 5px 5px;
 				}
-				.btn {
-					
-					width: 100px;
-					height: 28px;
-					padding: 5px 0px;
-					margin: 5px 0px;
-					font-size: 13px;
-					background-color: #fff;
-					border-radius: 15px;
-					display: inline-flex;
-					align-items: center;
-					justify-content: center;
+				form .form-control {
+					line-height: 20px;
+					font-size: 16px;
 				}
-				.btn-back {
-					margin: 0px 10px 10px 10px;
+				ul li {
+					margin: 5px;
 				}
-				.btn-success {
-					height: auto;
-				}
-				article {
-					background-color: rgba($color: #fff, $alpha: 0.8);
-					margin: 15px;
-					padding: 15px;
-					border-radius: 15px;
-					text-align: justify;
-					font-size: 18px;
-					h5 {
-						text-align: center;
+				form .formField {
+					font-size: 20px;
+					padding: 5px;
+					input, select {
 						font-size: 16px;
-						margin: 0px 5px 5px 5px;
-						padding: 0px 5px 5px 5px;
-					}
-					.form-control {
-						font-family: 'Lato', sans-serif;
-						width: auto;
-						padding: 10px;
-						margin: 3px;
-						border: 2px;
-						border-radius: 10px;
-						line-height: 20px;
-						font-size: 16px;
-					}
-					ul li {
+						padding: 5px;
 						margin: 5px;
-						list-style: none;
 					}
-					form {
-						display: flex;
-						flex-direction: column;
-						border: 0;
-						.credit_date {
-							display: block;
-						}
-						.formField {
-							border-radius: 15px;
-							font-size: 20px;
-							padding: 5px;
-							label {
-								display: inline-block;
-							}
-							.checkbox_div {
-								display: flex;
-								height: 50px;
-								align-items: center;
-
-								.checkbox {
-									display: inline-flex;
-									flex-direction: row;
-									align-items: center;
-									justify-content: center;
-									height: 100%;
-									width: auto;
-								}
-								.radio_dot {
-									border: 0px;
-									width: 30px;
-									height: 30px;
-									margin: 0px 50px 0px 10px;
-								}
-							}
-							input,
-							select {
-								border-radius: 15px;
-								font-size: 16px;
-								padding: 5px;
-								margin: 5px;
-							}
-							button {
-								display: inline-flex;
-								align-items: center;
-								justify-content: center;
-								width: 100px;
-								height: 28px;
-								padding: 5px;
-								margin: 5px;
-								font-size: 16px;
-								background-color: #fff;
-								border-radius: 10px;
-							}
-							.submit_btn {
-								background-color: #fff;
-								
-							}
-						}
+					button {
+						width: 100px;
+						height: 28px;
+						padding: 5px;
+						margin: 5px;
+						font-size: 16px;
+						border-radius: 10px;
 					}
 				}
 			}
-		}
-		footer {
-			margin: 0px;
-			font-size: x-small;
 		}
 	}
 }
-
-
-
-
-
-// body {
-// 	background-image: url('./assets/courthouse.jpeg');
-// 	background-repeat: no-repeat;
-// 	background-color: #fff;
-// 	font-family: 'Lato', sans-serif;
-// 	padding: 0px;
-// 	margin: 0px;
-// 	border: 0px;
-// 	.btn:hover {
-// 		background: rgba($color: #fff, $alpha: 0.9);
-// 	}
-// 	nav {
-// 		display: flex;
-// 		justify-content: space-around;
-// 		background-color: rgba($color: #eee, $alpha: 0.9);
-// 		logo {
-// 			display: flex;
-// 			width: 30%;
-// 			margin: 10px;
-// 			height: auto;
-// 		}
-// 		.navbar {
-// 			display: flex;
-// 			align-items: center;
-// 			justify-content: end;
-// 			padding: 10px;
-
-// 			width: auto;
-
-// 			.btn {
-// 				color: #222;
-// 				background: rgba($color: #eee, $alpha: 0);
-// 				border: 0;
-// 				border-radius: 100px;
-// 				padding: 10px 20px;
-// 				letter-spacing: 0.5px;
-// 				font-family: 'Lato', sans-serif;
-// 				font-size: 15px;
-// 			}
-// 			.btn:hover {
-// 				background: rgba($color: #fff, $alpha: 0.6);
-// 			}
-
-// 			.active-btn {
-// 				background: rgba($color: #fff, $alpha: 0.4);
-// 				backdrop-filter: blur(5px);
-// 			}
-// 		}
-// 	}
-// 	main {
-// 		display: flex;
-// 		align-items: stretch;
-// 		justify-content: space-around;
-// 		section {
-// 			align-items: stretch;
-// 			flex: 1;
-// 			header {
-// 				padding: 12px;
-// 				margin: 0px;
-// 				border: 0px;
-// 				text-align: center;
-// 				backdrop-filter: blur(8px);
-// 				color: #000;
-// 				background-color: rgba($color: #fff, $alpha: 0.4);
-
-// 				h1 {
-// 					padding: 0px;
-// 					margin: 0px;
-// 					border: 0px;
-// 				}
-// 				h2 {
-// 					padding: 0px;
-// 					margin: 0px;
-// 					border: 0px;
-// 				}
-// 			}
-// 			article {
-// 				text-align: justify;
-// 				margin-top: 30px;
-// 				margin-left: 10%;
-// 				margin-right: 10%;
-// 				background: rgba(255, 255, 255, 0.8);
-// 				backdrop-filter: blur(5px);
-// 				border-radius: 10px;
-// 				padding: 15px;
-// 				line-height: 1.7;
-// 				font-size: 15px;
-
-// 				h5 {
-// 					text-align: center;
-// 					font-weight: 400;
-// 					font-size: 15px;
-// 				}
-// 				a:hover {
-// 					color: darkblue;
-// 				}
-// 				form {
-// 					display: flex;
-// 					align-items: center;
-// 					justify-content: center;
-// 					flex-direction: column;
-// 					div {
-// 						display: inline;
-// 						button {
-// 							display: inline;
-// 							background-color: #eee;
-// 							border-radius: 10px;
-// 							border-color: #fff;
-// 							border-style: none;
-// 							margin: 3px;
-// 						}
-// 						button:hover {
-// 							background-color: #999;
-// 						}
-// 						p {
-// 							margin: 0px;
-// 						}
-// 						div {
-// 							display: flex;
-
-// 							align-items: center;
-// 							margin: 5px;
-
-// 							label {
-// 								margin: 5px;
-// 								display: flex;
-
-// 								margin: 0px 0px 0px 10px;
-// 							}
-// 							input {
-// 								display: flex;
-// 								margin: 0px 10px 0px 5px;
-// 							}
-// 						}
-// 					}
-// 				}
-// 				.form-control {
-// 					font-family: 'Lato', sans-serif;
-// 					//width: fit-content;
-// 					width: 260px;
-// 					padding: 5px;
-// 					margin: 3px;
-// 					border: 2px;
-// 					border-radius: 10px;
-// 				}
-// 				.formField {
-// 					padding: 10px;
-// 					margin: 10px;
-// 					background-color: white;
-// 					font-family: 'Lato', sans-serif;
-// 					//width: fit-content;
-// 					width: 260px;
-// 					padding: 5px;
-// 					margin: 3px;
-// 					border: 2px;
-// 					border-radius: 10px;
-// 					display: flex;
-// 					align-items: center;
-// 					justify-content: center;
-// 					flex-direction: column;
-
-// 					#bank_name {
-// 						border-radius: 10px;
-// 						border-color: #fff;
-// 						color: #555;
-// 						padding: 5px;
-// 						background-color: #eee;
-// 					}
-// 					input {
-// 						font-family: 'Lato', sans-serif;
-// 						border-radius: 10px;
-// 						padding: 5px;
-// 						//border: 0;
-// 						background-color: #eee;
-// 						border-style: none;
-// 						width: 200px;
-// 					}
-// 					.checkbox {
-// 						display: flex;
-// 						flex-direction: row;
-// 						width: auto;
-// 					}
-// 				}
-// 				.btn-success {
-// 					color: #222;
-// 					background: rgba($color: #fff, $alpha: 0.6);
-// 					border: 0;
-// 					border-radius: 10px;
-// 					padding: 7px;
-// 					width: fit-content;
-// 					font-family: 'Lato', sans-serif;
-// 				}
-// 				.btn-success:hover {
-// 					background: rgba($color: #fff, $alpha: 0.9);
-// 				}
-// 			}
-// 		}
-// 	}
-// }
-// ul {
-// 	display: flex;
-// 	flex-direction: column-reverse;
-// 	padding: 0px;
-// 	margin: 0px;
-// 	border: 0px;
-// 	line-height: 1.7;
-// 	li {
-// 		display: flex;
-// 		flex-direction: column;
-// 		justify-content: center;
-// 		margin-top: 30px;
-// 		margin-left: 10%;
-// 		margin-right: 10%;
-// 		background: rgba(255, 255, 255, 0.8);
-// 		backdrop-filter: blur(5px);
-// 		border-radius: 10px;
-// 		padding: 5px;
-// 		h4 {
-// 			display: flex;
-// 			padding: 2px;
-// 			margin: 2px;
-// 			border: 0px;
-// 			justify-content: center;
-// 		}
-// 		p {
-// 			padding: 2px;
-// 			margin: 2px;
-// 			border: 0px;
-// 			display: flex;
-// 			justify-content: center;
-// 		}
-
-// 		.readMoreBtn {
-// 			background-color: rgba(255, 255, 255, 0.4);
-// 			margin: 2px;
-// 			margin-top: 4px;
-// 			padding: 4px;
-// 			border: 2px;
-// 			border-radius: 10px;
-// 			width: fit-content;
-// 			font-family: 'Lato', sans-serif;
-// 			font-size: 14px;
-// 		}
-// 		.readMoreBtn:hover {
-// 			background: rgba($color: #fff, $alpha: 0.8);
-// 		}
-// 	}
-// }
-
-// .btn-back {
-// 	background-color: rgba(255, 255, 255, 0.7);
-// 	margin: 2px;
-// 	border-radius: 10px;
-// 	margin-left: 10%;
-// 	border: 0;
-// 	padding: 5px;
-// 	display: flex;
-// 	font-family: 'Lato', sans-serif;
-// 	font-size: 14px;
-// }
-
-// footer {
-// 	width: 100%;
-// 	text-align: center;
-// 	font-size: small;
-// 	margin: 10px;
-// }
